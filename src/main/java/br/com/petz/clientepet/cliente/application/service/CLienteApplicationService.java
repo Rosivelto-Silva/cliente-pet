@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.stereotype.Service;
 
+import br.com.petz.clientepet.cliente.application.Repository.ClienteRepository;
 import br.com.petz.clientepet.cliente.application.api.ClienteRequest;
 import br.com.petz.clientepet.cliente.application.api.ClienteResponse;
 import br.com.petz.clientepet.cliente.domain.Cliente;

@@ -6,7 +6,6 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 import br.com.petz.clientepet.cliente.domain.Sexo;
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.Value;
 
@@ -25,6 +24,5 @@ public class ClienteRequest {
 	private Sexo sexo;
 	private LocalDate dataNascimento;
 	@NotNull
-	@Getter(value = AccessLevel.NONE)
 	private Boolean aceitaTermos;
 }

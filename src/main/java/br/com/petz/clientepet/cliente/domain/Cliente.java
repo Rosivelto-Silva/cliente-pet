@@ -52,15 +52,14 @@ public class Cliente {
 	private LocalDateTime dataHoraDaUltimaAlteracao;
 
 	public Cliente(ClienteRequest clienteRequest) {
-		this.idCliente = UUID.randomUUID();
-		this.nomeCompleto = nomeCompleto;
-		this.celular = celular;
-		this.telefone = telefone;
-		this.email = email;
-		this.cpf = cpf;
-		this.sexo = sexo;
-		this.dataNascimento = dataNascimento;
-		this.aceitaTermos = aceitaTermos;
+		this.nomeCompleto = clienteRequest.getNomeCompleto();
+		this.celular = clienteRequest.getCelular();
+		this.telefone = clienteRequest.getTelefone();
+		this.email = clienteRequest.getEmail();
+		this.cpf = clienteRequest.getCpf();
+		this.sexo = clienteRequest.getSexo();
+		this.dataNascimento = clienteRequest.getDataNascimento();
+		this.aceitaTermos = clienteRequest.getAceitaTermos();
 		this.dataHoraDoCadastro = LocalDateTime.now();
 
 	}
