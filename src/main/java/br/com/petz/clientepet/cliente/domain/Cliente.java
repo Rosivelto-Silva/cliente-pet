@@ -16,6 +16,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.br.CPF;
 
+import br.com.petz.clientepet.cliente.application.api.ClienteRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,10 +25,9 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 public class Cliente {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	//@Column(columnDefinition = "UUID, name = "idCliente", nullable = false, unique = true, updatable = false)
+	@Column(columnDefinition = "UUID", name = "idCliente", nullable = false, unique = true, updatable = false)
 	private UUID idCliente;
 	@NotBlank
 	private String nomeCompleto;
