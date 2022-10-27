@@ -1,6 +1,7 @@
 package br.com.petz.clientepet.cliente.application.api;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.validation.Valid;
 
@@ -30,6 +31,13 @@ public class ClienteController implements ClienteAPI {
 		List<ClienteListResponse> listaClientes = clienteService.listaTodosCliente();
 		log.info("[finaliza] ClienteController - getListaTodosCliente");
 		return listaClientes;
+	}
+
+	@Override
+	public ClienteDetalhadoResponse getBuscarClienteId(UUID idCliente) {
+		log.info("[inicia] ClienteController - getBuscarClienteId");
+		log.info("[finaliza] ClienteController - getBuscarClienteId");
+		return null;
 	}
 
 }
