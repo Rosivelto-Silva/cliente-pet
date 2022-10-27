@@ -1,5 +1,7 @@
 package br.com.petz.clientepet.cliente.infra;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import br.com.petz.clientepet.cliente.application.Repository.ClienteRepository;
@@ -20,6 +22,14 @@ public class ClienteInfraRepository implements ClienteRepository {
 		Cliente salvaCliente = clienteSpringDataJPARepository.save(cliente);
 		log.info("[finaliza] ClienteInfraRepository - salva");
 		return salvaCliente;
+	}
+
+	@Override
+	public List<Cliente> buscaTodosCliente() {
+		log.info("[inicia] ClienteInfraRepository - buscaTodosCliente");
+		List<Cliente> buscaTodos = clienteSpringDataJPARepository.findAll();
+		log.info("[finaliza] ClienteInfraRepository - buscaTodosCliente");
+		return buscaTodos;
 	}
 
 }
